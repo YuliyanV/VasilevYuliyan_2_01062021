@@ -1,0 +1,189 @@
+/*
+        colors: {
+            #cfcfcf85;
+            #505050;
+            #1D50FC;
+ */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ========= Container ========= */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* ========= Navigation ========= */
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* === Logo === */
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 5rem;
+}
+
+
+/* === Sign-Up === */
+#sign-up a {
+    color: #1A63FC;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+
+
+/* === Nav === */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #747474;
+    padding: 1rem 0;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+nav a:active,
+nav a:focus {
+    color: #1a63fc;
+    font-weight: 400;
+    border-bottom: 2px solid #1A63FC;
+    outline: none;
+}
+
+
+
+/* === Title === */
+.site-title h1 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.site-title p {
+    margin: 1rem 0;
+    font-size: .9rem;
+}
+
+
+
+/* === Search-Bar === */
+.search {
+    display: flex;
+}
+
+.map {
+    padding: .8rem 1rem;
+    color: #000;
+    background-color: #cfcfcf;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.searchTerm {
+    padding: .8rem;
+    width: 80%;
+    border: 2px solid #cfcfcf;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.searchTerm::placeholder {
+    font-weight: 700;
+    font-size: .9rem;
+    color: #000;
+}
+
+.searchButton {
+    border: none;
+}
+
+.fa-search {
+    padding: 1rem;
+    background-color: #1a63fc;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+
+
+
+/* === Search-Filters === */
+.filters h3 {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-filters a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    border: 1px solid #cfcfcf;
+    border-radius: 25px;
+    margin: .2rem;
+    padding-right: 1rem;
+}
+
+.search-filters i {
+    color: #1a63fc;
+    background-color: #bdd2ff;
+    border-radius: 25px;
+    padding: .6rem;
+    margin-right: .5rem;
+}
+
+
+.info {
+    display: flex;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.info i {
+    font-size: .6rem;
+    padding: .2rem;
+    margin: 0 .3rem;
+    color: #1A63FC;
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.info p {
+    margin-left: .8rem;
+}
