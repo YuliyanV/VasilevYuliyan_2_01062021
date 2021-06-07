@@ -1,11 +1,3 @@
-/*
-        colors: {
-            #cfcfcf85;
-            #505050;
-            #1D50FC;
- */
-
-
 * {
     padding: 0;
     margin: 0;
@@ -16,14 +8,17 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-/* ========= Container ========= */
+
+
+/* -------------------------------- ========= CONTAINER ========= -----------------------------------------*/
 .container {
     width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-
-/* ========= Navigation ========= */
+/* ----------------- ========= HEADER ======== ----------------- */
+/* === Navigation === */
 .navigation {
     display: flex;
     align-items: center;
@@ -47,7 +42,6 @@ body {
     font-weight: 400;
     font-size: .8rem;
 }
-
 
 
 /* === Nav === */
@@ -81,9 +75,18 @@ nav a:focus {
     outline: none;
 }
 
+/* .current-section {
+    color: #1A63FC;
+    border-bottom: 2px solid #1A63FC;
+} */
+
+/* === End of Navigation === */
 
 
-/* === Title === */
+
+
+
+/*  === Site-Title === */
 .site-title h1 {
     font-size: 1.2rem;
     margin-top: 2rem;
@@ -93,6 +96,9 @@ nav a:focus {
     margin: 1rem 0;
     font-size: .9rem;
 }
+
+/* === End of Site-Title === */
+
 
 
 
@@ -111,7 +117,7 @@ nav a:focus {
 
 .searchTerm {
     padding: .8rem;
-    width: 80%;
+    width: 13rem;
     border: 2px solid #cfcfcf;
     border-left: none;
     border-right: none;
@@ -134,6 +140,8 @@ nav a:focus {
     border-radius: 10px;
     color: #fff;
 }
+
+/* === End of Search-Bar === */
 
 
 
@@ -167,7 +175,6 @@ nav a:focus {
     margin-right: .5rem;
 }
 
-
 .info {
     display: flex;
     margin: 1.5rem 0 2rem 0;
@@ -187,3 +194,259 @@ nav a:focus {
 .info p {
     margin-left: .8rem;
 }
+
+/* === End of Search-Filters === */
+
+
+
+
+
+
+/* ----------------- ========= HEBERGEMENTS ========= -----------------*/
+
+/* === Hebergement-Marseille === */
+.hebergements-marseille {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+}
+
+h3 {
+    padding: .5rem 0;
+}
+
+.cards-marseille {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.place-to-stay {
+    background-color: #fff;
+    padding: .2rem;
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    transition: all .3s ease-in-out;
+}
+
+.place-to-stay:hover {
+    transform: scale(1);
+    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+}
+
+.place-to-stay img {
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.place-to-stay p {
+    margin-left: .5rem;
+}
+
+.name a {
+    color: #000;
+    text-decoration: none;
+}
+
+.name a:active,
+.name a:focus,
+.name a:hover {
+    color: #1A63FC;
+    outline: none;
+}
+
+.price {
+    font-size: .7rem;
+}
+
+
+.learn-more {
+    margin-bottom: 3rem;
+}
+
+.learn-more a {
+    text-decoration: none;
+    color: #000;
+    outline-color: #1A63FC;
+}
+
+.learn-more a:hover {
+    color: #1A63FC;
+}
+
+/* === End of Hebergement-Marseille === */
+
+
+
+
+
+
+
+
+
+
+/* === Les-Plus-Populaires === */
+
+.les-plus-populaires {
+    background-color: #ebebeb;
+    display: flex;
+}
+
+.title-populaires {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card-populaire {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 8rem;
+    margin: 2rem 0;
+    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    transition: all .3s ease-in-out;
+}
+
+.card-populaire:hover {
+    transform: scale(1);
+    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+}
+
+.card-populaire img {
+    height: 100%;
+    width: 20vh;
+    padding: .2rem;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    padding: .6rem .2rem .2rem .4rem;
+}
+
+.card-description name {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.card-description .price {
+    font-size: .8rem;
+    margin: .5rem 0 2rem 0;
+}
+
+/* === End of Les-Plus-Populaires === */
+
+/* ----------------- ========= End ofHEBERGEMENTS ========= -----------------  */
+
+
+
+
+
+
+/* ----------------- === Activités à Marseille === ----------------- */
+
+.activites-marseille h3 {
+    margin: 1.5rem 0
+}
+
+.activites-card {
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    transition: all .3s ease-in-out;
+}
+
+.activites-card:hover {
+    transform: scale(1);
+    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+}
+
+.activites-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.activites-card p {
+    font-size: 1rem;
+    padding: .8rem;
+}
+
+/* === Activités à Marseille === */
+
+
+
+
+
+
+
+/* ----------------- === Footer === ----------------- */
+
+footer {
+    background-color: #ebebeb;
+}
+
+.footer-description h3 {
+    padding: 1.5rem 0;
+}
+
+.footer-description p {
+    padding-bottom: 1rem;
+}
+
+/* === End of Footer === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 430px) {
+    .container {
+        margin-top: 2rem;
+    }
+
+    nav {
+        width: 30%;
+    }
+
+
+
+
+
+
+    #sign-up {
+        order: 1;
+        margin-left: 3rem;
+    }
+
+
+} */
