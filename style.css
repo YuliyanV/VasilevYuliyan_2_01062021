@@ -115,6 +115,10 @@ nav a:focus {
     border-bottom-left-radius: 10px;
 }
 
+input {
+    caret-color: #1A63FC;
+}
+
 .searchTerm {
     padding: .8rem;
     width: 13rem;
@@ -128,6 +132,8 @@ nav a:focus {
     font-weight: 700;
     font-size: .9rem;
     color: #000;
+    position: relative;
+    left: .33rem;
 }
 
 .searchButton {
@@ -167,6 +173,11 @@ nav a:focus {
     padding-right: 1rem;
 }
 
+.search-filters a:hover {
+    background-color: #e4e4e4;
+    color: #1A63FC;
+}
+
 .search-filters i {
     color: #1a63fc;
     background-color: #bdd2ff;
@@ -174,6 +185,7 @@ nav a:focus {
     padding: .6rem;
     margin-right: .5rem;
 }
+
 
 .info {
     display: flex;
@@ -203,94 +215,6 @@ nav a:focus {
 
 
 /* ----------------- ========= HEBERGEMENTS ========= -----------------*/
-
-/* === Hebergement-Marseille === */
-.hebergements-marseille {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 15px;
-}
-
-h3 {
-    padding: .5rem 0;
-}
-
-.cards-marseille {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.place-to-stay {
-    background-color: #fff;
-    padding: .2rem;
-    margin: 1rem 0;
-    width: 100%;
-    border-radius: 15px;
-    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
-    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
-    transition: all .3s ease-in-out;
-}
-
-.place-to-stay:hover {
-    transform: scale(1);
-    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
-    box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
-}
-
-.place-to-stay img {
-    object-fit: cover;
-    width: 100%;
-    height: 20vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.place-to-stay p {
-    margin-left: .5rem;
-}
-
-.name a {
-    color: #000;
-    text-decoration: none;
-}
-
-.name a:active,
-.name a:focus,
-.name a:hover {
-    color: #1A63FC;
-    outline: none;
-}
-
-.price {
-    font-size: .7rem;
-}
-
-
-.learn-more {
-    margin-bottom: 3rem;
-}
-
-.learn-more a {
-    text-decoration: none;
-    color: #000;
-    outline-color: #1A63FC;
-}
-
-.learn-more a:hover {
-    color: #1A63FC;
-}
-
-/* === End of Hebergement-Marseille === */
-
-
-
-
-
-
-
-
-
 
 /* === Les-Plus-Populaires === */
 
@@ -339,7 +263,7 @@ h3 {
     padding: .6rem .2rem .2rem .4rem;
 }
 
-.card-description name {
+.card-description .name {
     font-size: .8rem;
     font-weight: 700;
 }
@@ -349,7 +273,111 @@ h3 {
     margin: .5rem 0 2rem 0;
 }
 
+.card-description .review {
+    margin-top: 1rem;
+}
+
+.review {
+    color: #1A63FC;
+    font-size: .6rem;
+}
+
+.grey {
+    color: rgb(220, 220, 220);
+}
+
 /* === End of Les-Plus-Populaires === */
+
+
+
+
+/* === Hebergement-Marseille === */
+.hebergements-marseille {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+}
+
+h3 {
+    padding: .5rem 0;
+}
+
+.cards-marseille {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.place-to-stay {
+    background-color: #fff;
+    padding: .2rem;
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    transition: all .3s ease-in-out;
+}
+
+.place-to-stay:hover {
+    transform: scale(1);
+    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+    box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
+}
+
+.place-to-stay img {
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.place-to-stay p {
+    margin: .3rem 0 0 .5rem;
+}
+
+.place-to-stay .review {
+    padding: .2rem 0 .3rem 0;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.name a {
+    color: #000;
+    text-decoration: none;
+}
+
+.name a:active,
+.name a:focus,
+.name a:hover {
+    color: #1A63FC;
+    outline: none;
+}
+
+.price {
+    font-size: .9rem;
+}
+
+
+
+.learn-more {
+    margin: 1rem 0 2rem 0;
+}
+
+.learn-more a {
+    text-decoration: none;
+    color: #000;
+    outline-color: #1A63FC;
+}
+
+.learn-more a:hover {
+    color: #1A63FC;
+}
+
+/* === End of Hebergement-Marseille === */
 
 /* ----------------- ========= End ofHEBERGEMENTS ========= -----------------  */
 
@@ -367,6 +395,7 @@ h3 {
 .activites-card {
     border-radius: 15px;
     margin-bottom: 1.5rem;
+    width: 100%;
     -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     transition: all .3s ease-in-out;
@@ -414,39 +443,3 @@ footer {
 }
 
 /* === End of Footer === */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media screen and (min-width: 430px) {
-    .container {
-        margin-top: 2rem;
-    }
-
-    nav {
-        width: 30%;
-    }
-
-
-
-
-
-
-    #sign-up {
-        order: 1;
-        margin-left: 3rem;
-    }
-
-
-} */
