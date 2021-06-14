@@ -12,8 +12,7 @@ body {
 
 /* -------------------------------- ========= CONTAINER ========= -----------------------------------------*/
 .container {
-    width: 90%;
-    max-width: 1300px;
+    /* width: 90%; */
     margin: 0 auto;
 }
 
@@ -23,6 +22,7 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding: 1rem;
 }
 
 /* === Logo === */
@@ -36,10 +36,10 @@ body {
 
 
 /* === Sign-Up === */
-#sign-up a {
+.sign-up a {
     color: #1A63FC;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 700;
     font-size: .8rem;
 }
 
@@ -75,10 +75,6 @@ nav a:focus {
     outline: none;
 }
 
-/* .current-section {
-    color: #1A63FC;
-    border-bottom: 2px solid #1A63FC;
-} */
 
 /* === End of Navigation === */
 
@@ -87,6 +83,10 @@ nav a:focus {
 
 
 /*  === Site-Title === */
+.site-title {
+    padding: 1rem;
+}
+
 .site-title h1 {
     font-size: 1.2rem;
     margin-top: 2rem;
@@ -105,6 +105,7 @@ nav a:focus {
 /* === Search-Bar === */
 .search {
     display: flex;
+    padding: 1rem;
 }
 
 .map {
@@ -154,6 +155,10 @@ input {
 
 
 /* === Search-Filters === */
+.filters {
+    padding: 1rem;
+}
+
 .filters h3 {
     margin: 1.5rem 0 1rem 0;
 }
@@ -221,35 +226,40 @@ input {
 .les-plus-populaires {
     background-color: #ebebeb;
     display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+
 }
+
 
 .title-populaires {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin: 1rem 0;
+    padding: 0 1.5rem;
 }
 
 .card-populaire {
     display: flex;
+    align-self: center;
+    width: 90%;
     background-color: #fff;
     border-radius: 15px;
     height: 8rem;
-    margin: 2rem 0;
-    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
+    margin: .3rem 0;
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     transition: all .3s ease-in-out;
 }
 
 .card-populaire:hover {
     transform: scale(1);
-    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
 }
 
 .card-populaire img {
     height: 100%;
-    width: 20vh;
+    width: 140px;
     padding: .2rem;
     object-fit: cover;
     object-position: center;
@@ -274,7 +284,8 @@ input {
 }
 
 .card-description .review {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    align-self: baseline;
 }
 
 .review {
@@ -283,8 +294,12 @@ input {
 }
 
 .grey {
-    color: rgb(220, 220, 220);
+    color: #dcdcdc;
 }
+
+/* .card-description[data-rate="5"].review:nth-child(4) {
+    color: grey;
+} */
 
 /* === End of Les-Plus-Populaires === */
 
@@ -294,9 +309,8 @@ input {
 /* === Hebergement-Marseille === */
 .hebergements-marseille {
     display: flex;
+    padding: 1rem;
     flex-direction: column;
-    width: 100%;
-    border-radius: 15px;
 }
 
 h3 {
@@ -314,21 +328,19 @@ h3 {
     margin: 1rem 0;
     width: 100%;
     border-radius: 15px;
-    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     transition: all .3s ease-in-out;
 }
 
 .place-to-stay:hover {
     transform: scale(1);
-    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
 }
 
 .place-to-stay img {
     object-fit: cover;
+    height: 120px;
     width: 100%;
-    height: 20vh;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -389,28 +401,31 @@ h3 {
 /* ----------------- === Activités à Marseille === ----------------- */
 
 .activites-marseille h3 {
-    margin: 1.5rem 0
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.cards-container {
+    padding: 1rem;
 }
 
 .activites-card {
     border-radius: 15px;
     margin-bottom: 1.5rem;
     width: 100%;
-    -webkit-box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     transition: all .3s ease-in-out;
 }
 
 .activites-card:hover {
     transform: scale(1);
-    -webkit-box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
     box-shadow: 1px 6px 28px 5px rgba(0, 0, 0, 0.48);
 }
 
 .activites-card img {
     object-fit: cover;
     width: 100%;
-    height: 20vh;
+    height: 120px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -420,7 +435,7 @@ h3 {
     padding: .8rem;
 }
 
-/* === Activités à Marseille === */
+/* === End of Activités à Marseille === */
 
 
 
@@ -434,6 +449,10 @@ footer {
     background-color: #ebebeb;
 }
 
+.footer {
+    padding: 1rem;
+}
+
 .footer-description h3 {
     padding: 1.5rem 0;
 }
@@ -443,3 +462,362 @@ footer {
 }
 
 /* === End of Footer === */
+
+
+
+
+
+
+/* ----------------- === Media Queries === ----------------- */
+
+
+
+/* ----- === (Min-Width: 482px) and (Max-Width: 768px) === ----- */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* --------- === HEBERGEMENTS === --------- */
+
+    /* === Les-Plus-Populaires === */
+    .les-plus-populaires {
+        border-radius: 15px;
+    }
+
+    .card-populaire {
+        width: 60%;
+        margin: .5rem 3rem;
+    }
+
+    .tablet-size-left {
+        align-self: flex-start;
+    }
+
+    .tablet-size-right {
+        align-self: flex-end;
+    }
+
+    .card-description .review {
+        margin-top: 1rem
+    }
+
+
+    /* === Hebergement-Marseille === */
+    .cards-marseille {
+        justify-content: space-around;
+    }
+
+    .place-to-stay {
+        width: 45%;
+    }
+
+
+    /* === Activités à Marseille === */
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .activites-card {
+        width: 45%;
+    }
+
+
+    /* === Footer === */
+    footer {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+/* ----- === (Min-Width: 769px) and (Max-Width: 1024px) === ----- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* === Navigation === */
+    .navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+    }
+
+    .sign-up {
+        order: 1;
+        margin-left: 1rem;
+    }
+
+    nav {
+        width: 20%;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+
+    nav a:active,
+    nav a:focus,
+    nav a:hover {
+        color: #1a63fc;
+        font-weight: 400;
+        border-top: 2px solid #1A63FC;
+        border-bottom: none;
+        outline: none;
+    }
+
+
+
+    /* === Les-Plus-Populaires === */
+
+    .card-populaire {
+        width: 45%;
+    }
+
+    .tablet-size-left {
+        margin-right: 15rem;
+    }
+
+    .tablet-size-right {
+        margin-left: 15rem;
+    }
+
+
+
+
+
+    /* === Hebergement-Marseille === */
+
+    .cards-marseille {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .place-1 {
+        grid-column: 1/3;
+    }
+
+    .place-6 {
+        grid-column: -3/-1;
+    }
+
+    .place-to-stay img {
+        height: 10rem;
+        object-fit: cover;
+    }
+
+
+
+    /* === Activités à Marseille === */
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: .5rem;
+    }
+
+    .card-1 {
+        grid-column: 1/3;
+    }
+
+    .card-6 {
+        grid-column: -3/-1;
+    }
+
+
+
+    /* === Footer === */
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ----- === (Min-Width 1201px) === ----- */
+@media screen and (min-width: 1025px) {
+
+    /* --------- === Container === --------- */
+
+
+    .container {
+        width: 90%;
+        max-width: 1300px;
+    }
+
+
+
+    /* --------- === Header === --------- */
+
+    /* === Navigation === */
+    .navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+    }
+
+    .sign-up {
+        order: 1;
+        /* margin-left: 2rem; */
+        padding-left: 3rem;
+    }
+
+    nav {
+        width: 20%;
+    }
+
+    nav li {
+        padding-left: 1rem;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+
+    nav a:active,
+    nav a:focus,
+    nav a:hover {
+        color: #1a63fc;
+        font-weight: 400;
+        border-top: 2px solid #1A63FC;
+        border-bottom: none;
+        outline: none;
+    }
+
+
+    /* === Search-Filters === */
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .filters h3 {
+        margin-right: 1rem;
+    }
+
+    .search-filters {
+        margin: 0 15rem 0 1.5rem;
+    }
+
+
+
+    /* --------- === HEBERGEMENTS === --------- */
+
+    .mine {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    /* === Hebergement-Marseille === */
+    .hebergements-marseille {
+        background-color: #ebebeb;
+        width: 65%;
+        order: -1;
+        border-radius: 15px;
+    }
+
+    .cards-marseille {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .place-to-stay {
+        width: 30%;
+        height: 13.5rem;
+    }
+
+
+
+    /* === Les-Plus-Populaires === */
+    .les-plus-populaires {
+        border-radius: 15px;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    .card-populaire {}
+
+
+
+    /* === Activités à Marseille === */
+    .activites-marseille {
+        margin: 3.5rem 0;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem 1.5rem;
+    }
+
+    .activites-card {
+        margin: 0;
+    }
+
+
+    .card-1 {
+
+        grid-row: 1/3;
+    }
+
+    .card-1 img {
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    .card-2 {
+        grid-row: 1/2;
+    }
+
+    .card-3 {
+        grid-row: 2/2;
+    }
+
+
+    .card-4 {
+        grid-row: 1/3;
+    }
+
+    .card-4 img {
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    .card-6 {
+        grid-column: 4/4;
+    }
+
+
+    /* === Footer === */
+    .footer {
+        display: flex;
+        padding: 2rem 0 3rem 0;
+    }
+
+    .footer-description {
+        margin-right: 15rem;
+
+    }
+
+
+
+}
+
+/* === End of (Min-Width 1200px) === */
