@@ -10,6 +10,19 @@ body {
 
 
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
 /* -------------------------------- ========= CONTAINER ========= -----------------------------------------*/
 .container {
     /* width: 90%; */
@@ -73,6 +86,11 @@ nav a:focus {
     font-weight: 400;
     border-bottom: 2px solid #1A63FC;
     outline: none;
+}
+
+.current-section {
+    border-bottom: 2px solid #1a63fc;
+    color: #1a63fc;
 }
 
 
@@ -147,6 +165,7 @@ input {
     border-radius: 10px;
     color: #fff;
 }
+
 
 /* === End of Search-Bar === */
 
@@ -240,6 +259,11 @@ input {
     padding: 0 1.5rem;
 }
 
+.populaire-card-link {
+    width: 100%;
+    align-self: center;
+}
+
 .card-populaire {
     display: flex;
     align-self: center;
@@ -247,7 +271,8 @@ input {
     background-color: #fff;
     border-radius: 15px;
     height: 8rem;
-    margin: .3rem 0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
     box-shadow: 1px 6px 11px -1px rgba(0, 0, 0, 0.48);
     transition: all .3s ease-in-out;
 }
@@ -270,6 +295,8 @@ input {
 .card-description {
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 100%;
     padding: .6rem .2rem .2rem .4rem;
 }
 
@@ -284,8 +311,9 @@ input {
 }
 
 .card-description .review {
-    /* margin-top: 1rem; */
-    align-self: baseline;
+    top: 6.5rem;
+    position: absolute;
+
 }
 
 .review {
@@ -297,9 +325,6 @@ input {
     color: #dcdcdc;
 }
 
-/* .card-description[data-rate="5"].review:nth-child(4) {
-    color: grey;
-} */
 
 /* === End of Les-Plus-Populaires === */
 
@@ -357,17 +382,7 @@ h3 {
     font-weight: 700;
 }
 
-.name a {
-    color: #000;
-    text-decoration: none;
-}
 
-.name a:active,
-.name a:focus,
-.name a:hover {
-    color: #1A63FC;
-    outline: none;
-}
 
 .price {
     font-size: .9rem;
@@ -410,6 +425,7 @@ h3 {
 }
 
 .activites-card {
+    display: block;
     border-radius: 15px;
     margin-bottom: 1.5rem;
     width: 100%;
@@ -461,7 +477,17 @@ footer {
     padding-bottom: 1rem;
 }
 
+.footer-description a:hover,
+.footer-description a:active {
+    color: #1A63FC;
+    border-bottom: .5px solid #1a63fc;
+}
+
+
 /* === End of Footer === */
+
+
+
 
 
 
@@ -471,10 +497,57 @@ footer {
 /* ----------------- === Media Queries === ----------------- */
 
 
+/* ----- === (Min-Width: 279px) and (Max-Width: 480px) === ----- */
 
-/* ----- === (Min-Width: 482px) and (Max-Width: 768px) === ----- */
+@media screen and (min-width: 279px) and (max-width: 480px) {
+
+
+    /* --------- === NAVIGATION === --------- */
+
+
+    /* === Search-Bar === */
+    .rechercher {
+        display: none;
+    }
+
+
+
+}
+
+/* === End OF (Min-Width: 279px) and (Max-Width: 480px) === */
+
+
+
+
+
+
+/* ----- === (Min-Width: 481px) and (Max-Width: 768px) === ----- */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* --------- === NAVIGATION === --------- */
+
+
+    /* === Search-Bar === */
+    .searchButton {
+        display: none;
+    }
+
+    .rechercher {
+        background-color: #1a63fc;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 .8rem;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: none;
+    }
+
+    .rechercher:hover {
+        cursor: pointer;
+    }
+
+
 
     /* --------- === HEBERGEMENTS === --------- */
 
@@ -496,9 +569,7 @@ footer {
         align-self: flex-end;
     }
 
-    .card-description .review {
-        margin-top: 1rem
-    }
+
 
 
     /* === Hebergement-Marseille === */
@@ -531,21 +602,53 @@ footer {
 
     .footer {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* text-align: center; */
+        /* align-items: baseline; */
+
     }
+
+    .footer-description {
+        width: 25%;
+    }
+
+
 }
+
+/* === End Of (Min-Width: 481px) and (Max-Width: 768px) === */
+
+
+
 
 
 
 
 /* ----- === (Min-Width: 769px) and (Max-Width: 1024px) === ----- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .searchButton {
+        display: none;
+    }
+
+
+    .rechercher {
+        background-color: #1a63fc;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 .8rem;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: none;
+    }
+
+    .rechercher:hover {
+        cursor: pointer;
+    }
+
 
     /* === Navigation === */
     .navigation {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-top: 1rem;
+        padding: 0 1rem;
     }
 
     .sign-up {
@@ -554,22 +657,19 @@ footer {
     }
 
     nav {
-        width: 20%;
+        width: 25%;
     }
 
     nav a {
         border-bottom: none;
     }
 
-    nav a:active,
-    nav a:focus,
-    nav a:hover {
-        color: #1a63fc;
-        font-weight: 400;
-        border-top: 2px solid #1A63FC;
+    .current-section {
         border-bottom: none;
-        outline: none;
+        border-top: 2px solid #1a63fc;
     }
+
+
 
 
 
@@ -580,14 +680,12 @@ footer {
     }
 
     .tablet-size-left {
-        margin-right: 15rem;
+        margin-right: 25rem;
     }
 
     .tablet-size-right {
-        margin-left: 15rem;
+        margin-left: 25rem;
     }
-
-
 
 
 
@@ -640,6 +738,8 @@ footer {
 
 }
 
+/* === End Of (Min-Width: 769px) and (Max-Width: 1024px) === */
+
 
 
 
@@ -654,6 +754,26 @@ footer {
     /* --------- === Container === --------- */
 
 
+
+    .searchButton {
+        display: none;
+    }
+
+    .rechercher {
+        background-color: #1a63fc;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 .8rem;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: none;
+    }
+
+    .rechercher:hover {
+        cursor: pointer;
+    }
+
+
     .container {
         width: 90%;
         max-width: 1300px;
@@ -661,18 +781,23 @@ footer {
 
 
 
+
+
     /* --------- === Header === --------- */
+    header {
+        /* padding: 1rem 0; */
+    }
 
     /* === Navigation === */
     .navigation {
         display: flex;
         flex-wrap: nowrap;
-        padding-top: 1rem;
+        padding: 0 1rem;
     }
 
     .sign-up {
         order: 1;
-        /* margin-left: 2rem; */
+        margin-left: 2rem;
         padding-left: 3rem;
     }
 
@@ -680,23 +805,33 @@ footer {
         width: 20%;
     }
 
-    nav li {
-        padding-left: 1rem;
+
+    .current-section {
+        border-top: 3px solid #1a63fc;
+        border-bottom: none;
+        color: #1a63fc;
     }
 
     nav a {
+        padding: 2rem 0;
         border-bottom: none;
     }
 
-    nav a:active,
-    nav a:focus,
-    nav a:hover {
+    /* nav a:active,
+    nav a:focus {
         color: #1a63fc;
         font-weight: 400;
-        border-top: 2px solid #1A63FC;
-        border-bottom: none;
-        outline: none;
+        border-top: .5px solid #1A63FC;
+    } */
+
+
+    /* === Search-Bar === */
+    .searchButton {
+        display: none;
     }
+
+
+
 
 
     /* === Search-Filters === */
@@ -752,8 +887,9 @@ footer {
         width: 30%;
     }
 
-    .card-populaire {}
-
+    .populaire-card-link {
+        margin: 0 auto;
+    }
 
 
     /* === Activités à Marseille === */
@@ -764,45 +900,81 @@ footer {
     .cards-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 1rem 1.5rem;
+        grid-template-rows: 12rem;
+        grid-gap: 0 1.2rem;
     }
 
-    .activites-card {
-        margin: 0;
+    .activites-card p {
+        padding: 0.4rem;
     }
+
 
 
     .card-1 {
-
         grid-row: 1/3;
+        height: 25rem;
     }
 
     .card-1 img {
-        height: 20rem;
-        object-fit: cover;
+        height: 22rem;
     }
+
+
 
     .card-2 {
-        grid-row: 1/2;
+        height: 14rem;
     }
 
-    .card-3 {
-        grid-row: 2/2;
+    .card-2 img {
+        height: 11rem;
     }
+
+
+
+    .card-3 {
+        height: 10rem;
+        grid-row: 2/2;
+        align-self: end;
+    }
+
+    .card-3 img {
+        height: 7rem;
+    }
+
 
 
     .card-4 {
         grid-row: 1/3;
+        height: 25rem;
     }
 
     .card-4 img {
-        height: 20rem;
-        object-fit: cover;
+        height: 22rem;
     }
 
-    .card-6 {
-        grid-column: 4/4;
+
+
+    .card-5 {
+        height: 11rem;
     }
+
+    .card-5 img {
+        height: 8rem;
+    }
+
+
+
+    .card-6 {
+        height: 13rem;
+        align-self: center;
+    }
+
+    .card-6 img {
+        height: 10rem;
+    }
+
+
+
 
 
     /* === Footer === */
@@ -814,6 +986,11 @@ footer {
     .footer-description {
         margin-right: 15rem;
 
+    }
+
+    .les-plus-populaires a {
+        text-decoration: none;
+        color: #000;
     }
 
 
