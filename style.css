@@ -499,7 +499,7 @@ footer {
 
 /* ----- === (Min-Width: 279px) and (Max-Width: 480px) === ----- */
 
-@media screen and (min-width: 279px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
 
     /* --------- === NAVIGATION === --------- */
@@ -789,6 +789,8 @@ footer {
     }
 
     /* === Navigation === */
+
+
     .navigation {
         display: flex;
         flex-wrap: nowrap;
@@ -812,17 +814,15 @@ footer {
         color: #1a63fc;
     }
 
+    .current-section-2 {
+        border-top: 3px solid transparent;
+    }
+
     nav a {
-        padding: 2rem 0;
+        padding: 2rem 1.3rem;
         border-bottom: none;
     }
 
-    /* nav a:active,
-    nav a:focus {
-        color: #1a63fc;
-        font-weight: 400;
-        border-top: .5px solid #1A63FC;
-    } */
 
 
     /* === Search-Bar === */
